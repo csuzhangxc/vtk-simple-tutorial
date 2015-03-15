@@ -94,3 +94,7 @@ endif()
 编译完成后，执行 *mingw32-make install*，将编译生成文件输出到已配置的 *CMAKE_INSTALL_PREFIX* 目录中，此时该目录中将有 *bin*、 *include*、 *lib*、 *plugins*、 *share* 文件夹。
 
 如果在添加了 *d* 后缀进行编译后执行 *mingw32-make install* 时，提示 *libQVTKWidgetPlugin.dll* 文件复制错误，可手动修改 **生成目录/GUISupport/Qt/PluginInstall.cmake** 文件，将其中的 *libQVTKWidgetPlugin.dll* 修改为 *libQVTKWidgetPlugind.dll*。
+
+### 参考
+1. [http://www.vtk.org/Wiki/VTK/Configure_and_Build](http://www.vtk.org/Wiki/VTK/Configure_and_Build)
+2. [http://vtk.1045678.n5.nabble.com/vtk-users-VTK-6-0-Compile-issue-with-MinGW64-on-Windows-7-x64-td5724152.html#a5726939](http://vtk.1045678.n5.nabble.com/vtk-users-VTK-6-0-Compile-issue-with-MinGW64-on-Windows-7-x64-td5724152.html#a5726939)
