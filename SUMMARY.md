@@ -6,4 +6,5 @@
    * [第一个 VTK 程序](getting_started/the_first.md)
    * [QVTKWidget 集成](getting_started/qvtkwidget.md)
 * [VTK 基础](basic/README.md)
+   * [VTK 可视化流程](basic/vtk_workflow.md)
 

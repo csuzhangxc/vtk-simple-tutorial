@@ -2,6 +2,8 @@
 
 快速上手 VTK。
 
+教程中示例程序完整代码见 **_examples** 文件夹。
+
 GitHub 维护地址：[https://github.com/csuzhangxc/vtk-simple-tutorial](https://github.com/csuzhangxc/vtk-simple-tutorial)
 
 ## 目录
