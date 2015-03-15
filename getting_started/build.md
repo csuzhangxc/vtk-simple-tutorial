@@ -17,7 +17,11 @@
 安装 Qt （安装过程中注意勾选安装MinGW）与 CMake ，并添加与 Qt 集成安装的 MinGW 可执行程序路径（ Qt\*\*\*/Tools/mingw\*\*\*/bin，即 mingw32-make.exe 所在路径）到系统环境变量 *PATH*。
 解压 VTK，建议解压后路径不要包含中文与空格。
 
-打开 VTK 目录下的 **CMakeLists.txt** 文件，在约第219行，将 *set(VTK_USE_WIN32_THREADS 1)* 修改为 *set(VTK_USE_PTHREADS 1)*，该处原始上下文为：
+打开 VTK 目录下的 **CMakeLists.txt** 文件，在约第219行，将 ```
+set(VTK_USE_WIN32_THREADS 1)```
+ 修改为 ```
+set(VTK_USE_PTHREADS 1)```
+，该处原始上下文为：
 ```
 include(FindThreads)
 set(VTK_USE_WIN32_THREADS 0)
@@ -37,7 +41,9 @@ elseif(CMAKE_USE_SPROC_INIT)
 endif()
 ```
 
-打开 **VTK目录/ThirdParty/libxml2/vtklibxml2/threads.c**，在文件开头 *#include “libxml.h”* 后添加行： *#undef HAVE_WIN32_THREADS*，修改后上下文为：
+打开 **VTK目录/ThirdParty/libxml2/vtklibxml2/threads.c**，在文件开头 ```#include "libxml.h"```
+ 后添加行： ```#undef HAVE_WIN32_THREADS```
+，修改后上下文为：
 ```
 #define IN_LIBXML
 #include "libxml.h"
@@ -96,5 +102,6 @@ endif()
 如果在添加了 *d* 后缀进行编译后执行 *mingw32-make install* 时，提示 *libQVTKWidgetPlugin.dll* 文件复制错误，可手动修改 **生成目录/GUISupport/Qt/PluginInstall.cmake** 文件，将其中的 *libQVTKWidgetPlugin.dll* 修改为 *libQVTKWidgetPlugind.dll*。
 
 ### 参考
+
 1. [http://www.vtk.org/Wiki/VTK/Configure_and_Build](http://www.vtk.org/Wiki/VTK/Configure_and_Build)
 2. [http://vtk.1045678.n5.nabble.com/vtk-users-VTK-6-0-Compile-issue-with-MinGW64-on-Windows-7-x64-td5724152.html#a5726939](http://vtk.1045678.n5.nabble.com/vtk-users-VTK-6-0-Compile-issue-with-MinGW64-on-Windows-7-x64-td5724152.html#a5726939)
