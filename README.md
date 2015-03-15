@@ -2,6 +2,8 @@
 
 快速上手 VTK。
 
+GitHub 维护地址：[https://github.com/csuzhangxc/vtk-simple-tutorial](https://github.com/csuzhangxc/vtk-simple-tutorial)
+
 ## 目录
 
 1. 开始使用 VTK
