@@ -34,7 +34,7 @@ HEADERS  +=
 
 其中 ```
 INCLUDEPATH += D:/VTK-6.1.0/MinGW/include/vtk-6.1```
- 为添加 VTK 头文件所在路径； ```LIBS += -LD:/VTK-6.1.0/MinGW/lib/``` 为添加 VTK 库文件所在路径（对于 MinGW 编译为 *.a* 文件所在路径，对于 VS 编译为 *.lib* 文件所在路径）； ```LIBS += -lvtk***-6.1d``` 等为添加具体的库文件（请注意实际使用到的库文件版本）。
+ 为添加 VTK 头文件所在路径； ```LIBS += -LD:/VTK-6.1.0/MinGW/lib/``` 为添加 VTK 库文件所在路径（对于 MinGW 编译为 *.a* 文件所在路径，对于 VS 编译为 *.lib* 文件所在路径）； ```LIBS += -lvtk***-6.1d``` 等为添加具体的库文件（请注意实际使用到的库文件版本及是否需要添加 *d* 后缀）。
 
 将 **main.cpp** 修改为类似如下：
 
