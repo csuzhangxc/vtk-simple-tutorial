@@ -1,6 +1,6 @@
-# 第一个VTK程序
+# 第一个 VTK 程序
 
-## 在Qt中使用VTK
+## 在 Qt 中使用 VTK
 
 ### ImageViewer 程序
 
@@ -106,3 +106,4 @@ VTK_MODULE_INIT(vtkInteractionStyle)```
 ### 参考
 
 1. [http://www.vtk.org/Wiki/VTK/VTK_6_Migration/Factories_now_require_defines](http://www.vtk.org/Wiki/VTK/VTK_6_Migration/Factories_now_require_defines)
+2. [http://public.kitware.com/pipermail/vtkusers/2014-July/084396.html](http://public.kitware.com/pipermail/vtkusers/2014-July/084396.html)

@@ -1,6 +1,6 @@
 # 编译与安装
 
-## Qt5（MinGW）使用CMake编译与使用VTK6
+## Qt5（MinGW）使用 CMake 编译与使用 VTK6
 
 ### 本文使用的各软件版本
 * Qt：5.4.0
