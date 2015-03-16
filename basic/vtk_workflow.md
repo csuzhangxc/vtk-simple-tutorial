@@ -82,12 +82,43 @@ int main()
 }
 ```
 
-![Cylinder工作流程](../_images/basic/cylinder_workflow.png)
+![ Cylinder 工作流程](../_images/basic/cylinder_workflow.png)
 
+## Contour2D 程序
+
+**说明：**本示例程序完成代码见 **_examples/Contour2D**。
+
+```
+/* 二维等值线提取与可视化代码片段 */
+    // 等值线 Filter
+    vtkContourFilter *contourFilter = vtkContourFilter::New();
+    contourFilter->SetValue(0, ui->selectedValueLabel->text().toDouble());
+    contourFilter->SetInputData(polyData);
+
+    // 将几何数据转换为可被渲染引擎绘制的可视化表达
+    vtkPolyDataMapper *contourMapper = vtkPolyDataMapper::New();
+    contourMapper->SetInputConnection(contourFilter->GetOutputPort());
+    contourMapper->ScalarVisibilityOff();
+
+    // 需要被渲染绘制的对象
+    contourActor = vtkActor::New();
+    contourActor->SetMapper(contourMapper);
+    contourActor->GetProperty()->SetColor(1.0, 0.0, 0.0);
+    contourActor->GetProperty()->SetLineWidth(2.0);
+
+    // 添加到渲染器
+    renderer->AddActor(contourActor);
+```
+
+![ Contour2D 工作流程](../_images/basic/contour2d_workflow.png)
+
+相对于 Cylinder 程序，Contour2D 主要区别在于其在增加了 ```
+vtkContourFilter```
+ 过滤器。
+
+在进行数据可视化时，通过在可视化管线中连接一个或多个 Filter，可以执行相关可视化算法，实现对数据的加工处理并影响最终的可视化显示。
 
 ## 参考
 
 1. [http://blog.csdn.net/www_doling_net/article/details/8541436](http://blog.csdn.net/www_doling_net/article/details/8541436)
-
-
-
+2. [http://lzchenheng.blog.163.com/blog/static/8383353620108130751672/](http://lzchenheng.blog.163.com/blog/static/8383353620108130751672/)

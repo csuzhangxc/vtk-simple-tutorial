@@ -7,4 +7,5 @@
    * [QVTKWidget 集成](getting_started/qvtkwidget.md)
 * [VTK 基础](basic/README.md)
    * [VTK 可视化流程](basic/vtk_workflow.md)
+   * [智能指针](basic/smart_pointer.md)
 
