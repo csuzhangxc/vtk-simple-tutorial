@@ -2,7 +2,11 @@
 
 快速上手 VTK。
 
-教程中示例程序完整代码见 **_examples** 文件夹。
+教程中示例程序完整代码见 **_examples** 文件夹，直接使用时请注意修改 **.pro** 文件中的 ```
+INCLUDEPATH```
+、```
+LIBS```
+。
 
 GitHub 维护地址：[https://github.com/csuzhangxc/vtk-simple-tutorial](https://github.com/csuzhangxc/vtk-simple-tutorial)
 
