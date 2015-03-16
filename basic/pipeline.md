@@ -37,11 +37,13 @@ AddInputConnection```
 GetOutputPort```
  （均为 ```vtkAlgorithm``` 成员函数）进行连接。连接时，可以有多个 Input 或 Output。
 
+管线连接的起点为 Sources，终点为 Mappers，中间可以有 0 个、1 个或多个 Filters。
+
 管线连接时，必须确保参与连接的对象相互兼容。
 
 管线只有当计算需要时才会执行（Lazy Evaluation，惰性计算）。
 
-当管线中的 DataSet 或 Algorithm 发生改变时，管线需要重新执行。
+当管线中的 DataSet 或 Algorithm 发生改变时，管线需要重新执行。```vtkObject``` 内通过成员变量 ```MTime``` 记录最后修改时间（Modification Time）。
 
 ## 参考
 
