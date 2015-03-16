@@ -8,5 +8,6 @@
 * [VTK 基础](basic/README.md)
    * [VTK 可视化流程](basic/vtk_workflow.md)
    * [主要 class](basic/main_classes.md)
+   * [可视化管线](basic/pipeline.md)
    * [智能指针](basic/smart_pointer.md)
 
