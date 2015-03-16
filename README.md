@@ -21,3 +21,11 @@ GitHub 维护地址：[https://github.com/csuzhangxc/vtk-simple-tutorial](https:
     1.3 QVTKWidget 集成
 
 2. VTK 基础
+
+    2.1 VTK 可视化流程
+
+    2.2 主要 class
+
+    2.3 可视化管线
+
+    2.4 智能指针
