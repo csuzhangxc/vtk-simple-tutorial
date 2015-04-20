@@ -10,4 +10,12 @@
    * [主要 class](basic/main_classes.md)
    * [可视化管线](basic/pipeline.md)
    * [智能指针](basic/smart_pointer.md)
+   * [vtkDataArray](basic/vtkdataarray.md)
+   * [传输函数与分段函数](basic/transfer_function_&_piecewise_function.md)
+   * [体绘制](basic/volume_render.md)
+   * [vtkInteractorStyleUser](basic/vtkinteractorstyleuser.md)
+* [vtkAlgorithm](vtkalgorithm/README.md)
+   * [vtkCutter](vtkalgorithm/vtkcutter.md)
+   * [vtkImageAccumulate](vtkalgorithm/vtkimageaccumulate.md)
+   * [vtkVertexGlyphFilter](vtkalgorithm/vtkvertexglyphfilter)
 
